@@ -7,5 +7,5 @@ custom
 *.swp
 !custom/example.zshcache
 cache/
-vim/bundle
+vim/bundle/*
 !vim/bundle/vundle
