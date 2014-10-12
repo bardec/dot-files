@@ -20,11 +20,10 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/heroku/bin:/Users/bardec/.rvm/gems/ruby-2.1.1/bin:/Users/bardec/.rvm/gems/ruby-2.1.1@global/bin:/Users/bardec/.rvm/rubies/ruby-2.1.1/bin:/usr/local/ruby/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/CrossPack-AVR/bin:/usr/texbin:/usr/local/pear/bin:/bin:/bin:/bin:/usr/local/Cellar/python/2.7.2/bin:/Applications/wkhtmltopdf.app/Contents/MacOS:/Users/bardec/.rvm/bin:/Users/bardec/.rvm/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
-
-export GOPATH="/usr/local/Cellar/go/1.2.1"
-# You may need to manually set your language environment
+if [ -e "~/.zsh_path" ]
+then
+  source ~/.zsh_path
+fi
 # export LANG=en_US.UTF-8
 
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
