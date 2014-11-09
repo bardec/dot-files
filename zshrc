@@ -14,7 +14,7 @@ ZSH_THEME="caleb"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=( git brew )
+plugins=( git brew vagrant )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -37,3 +37,10 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Only if on local machine
+if [[ $(uname) == "Darwin" ]]; then
+  DEVBOX_ID="83d6f67"
+  alias devbox_running_or_down="vagrant global-status | grep \$DEVBOX_ID | awk '{split(\$0,a,\" \"); if (a[4] == \"running\") {err = 0} else {err = 1}} END {exit err}'"
+  alias ssh-devbox="if [ ! devbox_running_or_down ]; then vagrant up \$DEVBOX_ID; fi; vagrant ssh \$DEVBOX_ID;"
+fi
