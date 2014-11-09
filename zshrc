@@ -25,17 +25,8 @@ then
   source ~/.zsh_path
 fi
 # export LANG=en_US.UTF-8
-
+bindkey -v
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Only if on local machine
@@ -44,3 +35,10 @@ if [[ $(uname) == "Darwin" ]]; then
   alias devbox_running_or_down="vagrant global-status | grep \$DEVBOX_ID | awk '{split(\$0,a,\" \"); if (a[4] == \"running\") {err = 0} else {err = 1}} END {exit err}'"
   alias ssh-devbox="if [ ! devbox_running_or_down ]; then vagrant up \$DEVBOX_ID; fi; vagrant ssh \$DEVBOX_ID;"
 fi
+
+#make new jekyll blog post with a title
+__jekyllnewpost () {
+  vim $(date '+%Y-%m-%d')-${1// /-}
+}
+
+alias jekyllnewpost='__jekyllnewpost'

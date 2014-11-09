@@ -1,4 +1,5 @@
 " ========= Setup ========
+" Started from https://github.com/SeanHurley/dotfiles
 
 set nocompatible
 
@@ -14,6 +15,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'jlanzarotta/bufexplorer'
