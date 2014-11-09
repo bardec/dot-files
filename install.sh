@@ -8,8 +8,13 @@ curl -L http://install.ohmyz.sh | sh
 
 chsh -s /bin/zsh
 
-ln -s $PWD/tmux.conf ~/.tmux.conf
-ln -s $PWD/vimrc ~/.vimrc
-ln -s $PWD/zshrc ~/.zshrc
-ln -s $PWD/vim ~/.vim
-ln -s $PWD/caleb.theme ~/.oh-my-zsh/themes/caleb.theme
+CUR_DIR=$PWD
+cd ~/.oh-my-zsh
+git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+cd $CUR_DIR
+
+ln -sf $PWD/tmux.conf ~/.tmux.conf
+ln -sf $PWD/vimrc ~/.vimrc
+ln -sf $PWD/zshrc ~/.zshrc
+ln -sf $PWD/vim ~/.vim
+ln -sf $PWD/caleb.zsh-theme ~/.oh-my-zsh/themes/caleb.zsh-theme
