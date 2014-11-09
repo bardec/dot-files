@@ -1,13 +1,15 @@
 if [[ $(uname) == "Darwin" ]]; then
-  brew install zsh
-elif [[ $(uname) == "Ubuntu" ]]; then
-  sudo apt-get install zsh
+  brew install zsh tmux
+elif [[ $(uname) == "Linux" ]]; then
+  sudo apt-get install zsh tmux
 fi
 
-chsh -s usr/local/bin/zsh
+curl -L http://install.ohmyz.sh | sh
+
+chsh -s /bin/zsh
 
 ln -s $PWD/tmux.conf ~/.tmux.conf
 ln -s $PWD/vimrc ~/.vimrc
 ln -s $PWD/zshrc ~/.zshrc
 ln -s $PWD/vim ~/.vim
-ln -s $PWD/oh-my-zsh ~/.oh-my-zsh
+ln -s $PWD/caleb.theme ~/.oh-my-zsh/themes/caleb.theme
