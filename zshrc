@@ -17,6 +17,7 @@ ZSH_THEME="caleb"
 plugins=( git brew vagrant )
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.profile
 
 # User configuration
 
@@ -42,3 +43,4 @@ __jekyllnewpost () {
 }
 
 alias jekyllnewpost='__jekyllnewpost'
+eval "$(hub alias -s)"
