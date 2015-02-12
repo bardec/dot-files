@@ -1,6 +1,6 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/bardec/Documents/dot-files/vim/bundle/vim-go'
-let g:netrw_dirhist_2='/Users/bardec/Documents/test/music-collaboratory/.git'
-let g:netrw_dirhist_3='/Users/bardec/Documents/dot-files/.git'
-let g:netrw_dirhist_4='/Users/bardec/Documents/dot-files'
+let g:netrw_dirhist_1='/Users/calebbarde/Documents/dot-files/vim/bundle/vim-notes/misc/notes/user'
+let g:netrw_dirhist_2='/Users/calebbarde/Documents/dot-files/vim/bundle/vim-notes/misc/notes'
+let g:netrw_dirhist_3='/Users/calebbarde/Documents/dot-files/vim/bundle/vim-notes/misc/notes/shadow'
+let g:netrw_dirhist_4='/Users/calebbarde/Documents/temp/SeniorDesignClient/.git'

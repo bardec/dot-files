@@ -35,6 +35,7 @@ Plugin 'uarun/vim-protobuf'
 Plugin 'tpope/vim-ragtag'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-obsession.git'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-surround'
 Plugin 'jgdavey/vim-turbux'
@@ -46,13 +47,13 @@ Plugin 'scrooloose/syntastic'
 Plugin 'bitc/vim-hdevtools'
 Plugin 'kana/vim-filetype-haskell'
 Plugin 'fatih/vim-go'
+Plugin 'xolox/vim-notes'
+Plugin 'xolox/vim-misc'
 
 call vundle#end()
 filetype plugin indent on
 
 " ========= Options ========
-
-compiler ruby
 syntax on
 set hlsearch
 set number
@@ -296,3 +297,9 @@ au FileType haskell nnoremap <buffer> <silent> <F4> :HdevtoolsInfo<CR>
 au FileType go nmap <Leader>gdoc <Plug>(go-doc)
 au FileType go nmap <Leader>gdef <Plug>(go-def-split)
 
+augroup CursorLine
+    au!
+      au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+        au WinLeave * setlocal nocursorline
+      augroup END
+compiler ruby

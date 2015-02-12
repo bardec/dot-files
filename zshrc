@@ -44,3 +44,12 @@ __jekyllnewpost () {
 
 alias jekyllnewpost='__jekyllnewpost'
 eval "$(hub alias -s)"
+
+__tempify() {
+  case "$1" in
+  *.tmp) mv $1 ${1:r} ;;
+  *) mv $1 ${1}.tmp ;;
+  esac
+}
+
+alias tempify="__tempify"
